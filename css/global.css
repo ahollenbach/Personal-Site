@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+	background: url(../img/bg_light.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	backround-size: cover;
+	height: 100%;
+}
+body {
+	margin: 0px;
+	width: 100%;
+	/*height: 100%;*/
+	min-height: 100%;
+
+	background-color: rgba(14, 14, 14, 0.5);
+
+	display: -webkit-flex;
+	display: flex;
+}
+hr {
+	color:#a3a074;
+	background-color:#a3a074;
+	border: 1px solid #a3a074;
+}	
+p { 
+    font-family: "quicksandlight", Verdana, Tahoma;
+	color:#FFF;
+	font-size: 18px;
+}
+h3 { 
+    font-family: "quicksandlight", Verdana, Tahoma;
+	color:#FFF;
+	font-size:30px;
+	font-weight:normal;
+	padding-top: 10px;
+	padding-bottom:25px;
+	margin: 0px;
+	width:100%;
+}
+.highlight {
+	font-weight: bold;
+}
+
+#sidebar  {
+	font-family: "quicksandlight", Verdana, Tahoma;
+	color:#DDD;
+	font-size:20px;
+	width: 250px;
+	height: 100%;
+	background-color: rgba(10, 10, 10, 0.6);
+	position: fixed;
+
+	display: -webkit-flex;
+  	display: flex;
+}
+#content {
+	margin-left: 250px;
+	padding-left:20px;
+	min-width:300px;
+	max-width: 700px;
+	font-family: Helvetica;
+	color:#DDD;
+
+	-webkit-flex: 1;
+    flex: 1;
+}
+
+.center-wrapper {
+	text-align: center;
+}
+#wordcloud {
+	margin: 0 auto;
+	font-family: "quicksandlight", Verdana, Tahoma;
+	color:#DDD;
+	width:350px;
+	height:300px;
+}
+nav {
+	margin: auto;
+}
+nav a {
+	display: block;
+	padding: 30px 20px 30px 50px;
+	text-decoration:none;
+}
+nav a#logo {
+	text-align: center;
+	padding-left:20px;
+}
+a {
+	/*text-decoration:none;*/
+}
+a:link {
+	color:#DDD;
+}
+a:visited {
+	color:#DDD;
+}
+a:hover {
+	color:#DDD;
+}
+a:active {
+	color:#DDD;
+}
+
+.error {
+	background-color: rgba(10, 10, 10, 1);
+
+	width:100%;
+	height: 100%;
+	position:fixed;
+	top: 0;
+	left: 0;
+
+	text-align: center;
+}
+.error h3 {
+	padding: 10px;
+}
+.error p {
+	padding: 15px;
+	max-width: 800px;
+	margin: auto;
+}
+
+.error a:link {
+	color:#CCCCEE;
+	font-weight: bold;
+}
+.error a:hover {
+	color:#DDDDFF;
+}
+
+.error button {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	background-color: rgb(200, 123, 28);
+	border: 1px rgb(180, 100, 15) solid;
+
+	font-family: "quicksandlight", Verdana, Tahoma;
+	color:#DDD;
+	font-size: 2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+.error button:hover {
+	background-color: rgb(180, 103, 18);
+	border-color: rgb(150, 80, 10);
+}
+
+.label, .value {
+	font-size: 1.5em;
+	font-family: "quicksandlight", Verdana, Tahoma;
+}
+
+.label {
+	width: 200px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.value {
+	margin-left: 10px;
+}
+
+
+/** FONTS **/
+
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('../res/fonts/quicksand/quicksand_light-webfont.eot');
+    src: url('../res/fonts/quicksand/quicksand_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../res/fonts/quicksand/quicksand_light-webfont.woff') format('woff'),
+         url('../res/fonts/quicksand/quicksand_light-webfont.ttf') format('truetype'),
+         url('../res/fonts/quicksand/quicksand_light-webfont.svg#quicksandlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
