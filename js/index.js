@@ -17,6 +17,9 @@ $(document).ready(function() {
         $(".error").css("display","none")
     })
     addMustache();
+
+    // add image source
+    $("body").append("<div class='photo-source'>Photo provided by db-prods.net</div>");
 });
 /*
 $(window).resize(function() {
@@ -44,8 +47,8 @@ function addMustache() {
                 URL: "http://github.com/ahollenbach"
             },
             {
-                name: "Contact",
-                URL: "contact.html"
+                name: "About",
+                URL: "about.html"
             }
         ]
     };

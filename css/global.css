@@ -176,6 +176,24 @@ a:active {
 }
 
 
+.photo-source {
+	color: #EEE;
+	font-size: .75em;
+	font-family: "quicksandlight", Verdana, Tahoma;
+	padding: .15em .5em;
+	background-color: rgba(10,10,10,.5);
+	position: fixed;
+	right: 1em;
+	bottom: 0;
+
+	-webkit-border-top-left-radius: .25em;
+	-webkit-border-top-right-radius: .25em;
+	-moz-border-radius-topleft: .25em;
+	-moz-border-radius-topright: .25em;
+	border-top-left-radius: .25em;
+	border-top-right-radius: .25em;
+}
+
 /** FONTS **/
 
 @font-face {
