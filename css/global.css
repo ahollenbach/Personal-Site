@@ -61,6 +61,7 @@ h3 {
 	display: -webkit-flex;
   	display: flex;
 }
+
 #content {
 	margin-left: 250px;
 	padding-left:20px;
@@ -88,12 +89,8 @@ nav {
 }
 nav a {
 	display: block;
-	padding: 30px 20px 30px 50px;
+	padding: 30px;
 	text-decoration:none;
-}
-nav a#logo {
-	text-align: center;
-	padding-left:20px;
 }
 a {
 	/*text-decoration:none;*/
