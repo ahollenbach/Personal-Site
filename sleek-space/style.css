@@ -556,7 +556,7 @@ article .title a:hover {
 }
 article .post-meta {
   margin-bottom: 40px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-family: "Lato", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -735,8 +735,8 @@ html[xmlns] .clearfix {
       line-height: 1.5em;
     }
     article .post-meta{
-      font-size: 0.7em;
-      line-height: 1em;
+      font-size: 12px;
+      line-height: 16px;
     }
     .menu-main-nav-container a, .side-title, .menu-main-container a{
       font-size: 1em;
@@ -830,7 +830,10 @@ html[xmlns] .clearfix {
   h4 {
     color: #EFEFEF;
   }
-
+  p {
+    font-size: 18px;
+    line-height: 1.4em;
+  }
   .site-info p {
     margin-bottom: 0;
   }
