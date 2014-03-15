@@ -5,48 +5,24 @@
 	<title>Andrew Hollenbach</title>
 
 	<link href="css/global.css" rel="stylesheet" type="text/css" />
-	<!--link href="css/vendor/jqcloud.css" rel="stylesheet" type="text/css" /-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<!--script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"></script-->
-	<!--script type="text/javascript" src="js/vendor/jqcloud-1.0.4.min.js"></script-->
-	<script type="text/javascript" src="js/vendor/mustache.js"></script>
-	<script type="text/javascript" src="js/logo.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
-	<div id="sidebar">
+	<div class="dot-overlay"></div>
+	<div id="navbar">
 		<nav id="menu" class="menu">
-			<a href="./index.html"><canvas id="logo"></canvas></a>
+			<!--img id="logo" src='./img/logo_150w.png' /-->
+			<a href="./index.html" class="home menu-bold">Andrew Hollenbach</a>
+			<a href="about.html" class="about">About</a>
+			<a href="thoughts/" class="thoughts">Thoughts</a>
+			<a href="http://github.com/ahollenbach" class="projects">Projects</a>
 		</nav>
 	</div>
 	<div id="content">
-		<h3><span class="highlight">Andrew Hollenbach</span> is a computer science student in his fifth year at Rochester Institute of Technology (RIT).</h3>
-		<!--div class="center-wrapper"><div id="wordcloud"></div></div-->
-		<p>
-			I have many passions: data mining, computer vision, web development, space, science, music, photography, film, quidditch, games, sports...and the list goes on. If you want to learn more about me, don't hesitate to <a href="about.html">contact</a> me.
-		</p>
-		<p>
-			I'm also <a href="./thoughts/">logging the problems I face</a> while working on my various projects.
-		</p>
+		<img id="andrew-img" src="img/me_small.png" />
+		<div id="meet-andrew">
+			<h3>Meet <span class="highlight">Andrew,</span> a computer science student and lover of&nbsp;<span id="love-container"><span id="cur-love" class="love-elem">data mining</span>the Brick City Singers</span>.</h3>
+		</div>
 	</div>
-
-	<!--[if lte IE9]>
-	<div class="error">
-		<h3>Your browser is out-of-date!</h3>
-		<p>
-			The web is rapidly changing. New browsers bring 
-			enhanced <b>speed</b>, <b>security</b>, <b>compatibility</b>, and more 
-			over their predecessors. This site was designed 
-			with the major modern browsers in mind (IE10+, 
-			Firefox, Chrome, and Safari).
-		</p>
-		<p>
-			You should update your browser. You can find 
-			several options at <a href="http://whatbrowser.org/" target="_blank">whatbrowser.org</a>. If you choose not to update your browser, this site may not appear as the developer intended.
-		</p>
-		<button type="button">Proceed</button>
-	</div>
-	<![endif]-->
 </body>
 </html>

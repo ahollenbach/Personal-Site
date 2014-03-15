@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function () {
     var canvas = document.getElementById('logo');
     canvas.width = 150;
     canvas.height = 100;
@@ -54,4 +54,4 @@ $(document).ready(function() {
     ctx.closePath();
     ctx.fillStyle = fontColor;
     ctx.fill();
-});
+}

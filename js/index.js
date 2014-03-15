@@ -1,65 +1,78 @@
-var word_list = [
-    {text: "Data Mining", weight: 15},
-    {text: "Disruptive Technologies", weight: 9},
-    {text: "Problem Solving", weight: 10},
-    {text: "HTML5",   weight: 7},
-    {text: "Computer Science",  weight: 7},
-    {text: "Innovation",  weight: 8},
-    {text: "Buzzwords",  weight: 8}
+var loves = [
+	"data mining",
+	"problem solving",
+	"innovation",
+	"the web",
+	"quidditch",
+	"a cappella",
+	"the Brick City Singers",
+	"space",
+	"science",
+	"nature",
+	"web development",
+	"3D printing",
+	"music",
+	"sports",
+	"soccer",
+	"running",
+	"photography",
+	"film",
+	"backpacking",
+	"computer vision",
+	"databases",
+	"startups",
+	"Kickstarter",
+	"algorithms",
+	"nerdy jokes",
+	"quadrotors"
 ];
 
-$(document).ready(function() {
-    //makeWordCloud();
-    //var width = window.width;
-    //var contentWindow = $("#content");
-    //contentWindow.width(width-left_offset);
-    $(".error button").click(function(e) {
-        $(".error").css("display","none")
-    })
-    addMustache();
+function setLove() {
+	var container = document.getElementById("love-container");
+	var cur = document.getElementById("cur-love");
+	var next = document.createElement('span');
+	next.setAttribute('id','new-love');
+	next.setAttribute('class','love-elem');
+	container.insertBefore(next,cur);
 
-    // add image source
-    $("body").append("<div class='photo-source'>Photo provided by db-prods.net</div>");
-});
-/*
-$(window).resize(function() {
-    var width = $(window).width();
-    $("#content").animate({width:(width-left_offset-30)}, {duration: 300, width: 'easeOutBounce'});
-    makeWordCloud();
-});*/
+    var nextText = getRandomLove(cur.innerHTML);
+    next.innerHTML = nextText;
 
-function makeWordCloud() {
-    var cloud = $("#wordcloud");
-    cloud.width($("#content").width()-left_offset-30);
-    cloud.empty();
-    cloud.jQCloud(word_list);
+    window.setTimeout( function() {
+		next.style.opacity = 1;
+		next.style.bottom = ".25em";
+	}, 100 );
+
+    cur.classList.add('transition');
+
+    sleep(2000, removeTransition);
 }
 
-function addMustache() {
-    var menu = {
-        items: [
-            {
-                name: "Thoughts",
-                URL: "thoughts/"
-            },
-            {
-                name: "Projects",
-                URL: "http://github.com/ahollenbach"
-            },
-            {
-                name: "About",
-                URL: "about.html"
-            }
-        ]
-    };
-    var template = '<a href={{URL}}>{{name}}</a>';
-    var html = "";
-    menu.items.forEach(function(item) {
-        html += Mustache.to_html(template, item);
-    });
-    $("#menu").append(html);
+function removeTransition() {
+	var cur = document.getElementById("cur-love");
+	var next = document.getElementById("new-love");
+	cur.classList.remove('transition');
+
+	// make the "cur" now the "new", reset the "new" for the next love
+	cur.innerHTML = next.innerHTML;
+	next.parentNode.removeChild(next);
 }
 
-function appendAddress() {
-    console.log(window.location.href)
+function getRandomLove(oldText) {
+	var newText = oldText;
+	while(newText == oldText) {
+		newText = loves[Math.floor(Math.random()*loves.length)];
+	}
+	return newText;
 }
+
+function sleep(millis, callback) {
+    setTimeout(function()
+            { callback(); }
+    , millis);
+}
+
+
+window.onload = function () { 
+    setInterval(setLove,3000);
+};

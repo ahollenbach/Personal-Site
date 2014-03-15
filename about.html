@@ -5,49 +5,35 @@
 	<title>Andrew Hollenbach | About</title>
 
 	<link href="css/global.css" rel="stylesheet" type="text/css" />
-	
-	<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script-->
-	<script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/vendor/mustache.js"></script>
-	<script type="text/javascript" src="js/logo.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-	<div id="sidebar">
+	<div class="dot-overlay"></div>
+	<div id="navbar">
 		<nav id="menu" class="menu">
-			<a href="./"><canvas id="logo"></canvas></a>
+			<!--img id="logo" src='./img/logo_150w.png' /-->
+			<a href="./index.html" class="home">Andrew Hollenbach</a>
+			<a href="about.html" class="about menu-bold">About</a>
+			<a href="thoughts/" class="thoughts">Thoughts</a>
+			<a href="http://github.com/ahollenbach" class="projects">Projects</a>
 		</nav>
 	</div>
 	<div id="content">
-		<h3><span class="highlight">About</span> Andrew Hollenbach</h3>
+		<div id="wrapper">
+			<h3><span class="highlight">About</span> Andrew Hollenbach</h3>
 
-		<p>
-			I have many passions: data mining, computer vision, web development, space, science, music, photography, film, quidditch, games, sports...and the list goes on. Check me out on the web:
-		</p>
+			<p>
+				I have many passions: data mining, computer vision, web development, space, science, music, photography, film, quidditch, games, sports...and the list goes on. Check me out on the web:
+			</p>
 
-		<span class="label">Email:</span><span class="value"><a href="mailto:andrew.hollenbach@rit.edu">andrew.hollenbach@rit.edu</a></span>
-		<span class="label">LinkedIn:</span><span class="value"><a href="http://www.linkedin.com/ahollenbach">linkedin.com/ahollenbach</a></span>
-		<span class="label">GitHub:</span><span class="value"><a href="http://www.github.com/ahollenbach">github.com/ahollenbach</a></span>
-		<!--span class="label">Google+:</span><span class="value"><a href="www.google.com/+AndrewHollenbach">google.com/+AndrewHollenbach</a></span-->
-
+			<!-- Thanks to Thomas H (http://tomswebspace.com/round-social-media-icons/) for the great icons -->
+			<ul id="social-icons">
+				<li><a href="mailto:andrew.hollenbach@rit.edu" target="_blank">          <img title="email" src="img/social/email.png" /></a></li>
+				<li><a href="http://www.linkedin.com/in/ahollenbach" target="_blank">    <img title="LinkedIn" src="img/social/linkedin.png" /></a></li>
+				<li><a href="http://www.github.com/ahollenbach" target="_blank">         <img title="GitHub" src="img/social/github.png" /></a></li>
+				<li><a href="http://www.google.com/+AndrewHollenbach" target="_blank">   <img title="Google+" src="img/social/googleplus.png" /></a></li>
+				<li><a href="http://www.twitter.com/cellphonetower" target="_blank">     <img title="Twitter" src="img/social/twitter.png" /></a></li>
+				<li><a href="http://www.instagram.com/cellphone_tower" target="_blank">  <img title="Instagram" src="img/social/instagram.png" /></a></li>
+		</div>
 	</div>
-	
-	<!--[if lte IE9]>
-	<div class="error">
-		<h3>Your browser is out-of-date!</h3>
-		<p>
-			The web is rapidly changing. New browsers bring 
-			enhanced <b>speed</b>, <b>security</b>, <b>compatibility</b>, and more 
-			over their predecessors. This site was designed 
-			with the major modern browsers in mind (IE10+, 
-			Firefox, Chrome, and Safari).
-		</p>
-		<p>
-			You should update your browser. You can find 
-			several options at <a href="http://whatbrowser.org/" target="_blank">whatbrowser.org</a>. If you choose not to update your browser, this site may not appear as the developer intended.
-		</p>
-		<button type="button">Proceed</button>
-	</div>
-	<![endif]-->
 </body>
 </html>
