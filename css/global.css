@@ -171,6 +171,7 @@ h3 {
 /******************** Social Icons ********************/
 #social-icons {
 	margin: 2em 1em 1em 1em;
+	padding: 0;
 }
 #social-icons li {
 	display: inline;
