@@ -78,8 +78,14 @@ window.onload = function () {
 		compactMenu();
 	}
 
-    setInterval(setLove,3000);
+	if(document.getElementById("love-container") !== null) {
+    	setInterval(setLove,3000);
+    }
 };
+
+/////////////////////////////////////////////////////////////////////
+// Responsive Menu
+/////////////////////////////////////////////////////////////////////
 
 window.onresize = function(event) {
     if(window.innerWidth < 700) {
@@ -111,6 +117,7 @@ function uncompactMenu(e) {
 }
 
 function expandCompactedMenu(e) {
+	// TODO: Make .menu-bold the top element
 	e.preventDefault();
 	var menuItems = document.querySelectorAll('nav a');
 	for(var i=0;i<menuItems.length;i++) {
