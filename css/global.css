@@ -70,19 +70,36 @@ nav a {
 	text-decoration:none;
 	background-color: rgba(0,0,0,.7);
 
-	-webkit-transition: background-color .4s ease, border .5s ease;
-	-moz-transition:    background-color .4s ease, border .5s ease;
-	-o-transition:      background-color .4s ease, border .5s ease;
-	transition: 		background-color .4s ease, border .5s ease;
+	-webkit-transition: background-color .4s ease, border .5s ease, top .5s ease;
+	-moz-transition:    background-color .4s ease, border .5s ease, top .5s ease;
+	-o-transition:      background-color .4s ease, border .5s ease, top .5s ease;
+	transition: 		background-color .4s ease, border .5s ease, top .5s ease;
 }
 nav a.compact {
+	/*display:inherit;
+	position:relative;*/
 	display:none;
+	z-index:1;
+	padding:.4em 1em;
 }
+/*
+nav a.compact:nth-child(1):not(.menu-bold) { top: -3.8em; }
+nav a.compact:nth-child(2):not(.menu-bold) { top: -7.6em; }
+nav a.compact:nth-child(3):not(.menu-bold) { top:-11.4em; }
+nav a.compact:nth-child(4):not(.menu-bold) { top:-15.2em; }
+
+nav a.compact.expanded:nth-child(1):not(.menu-bold) { top: 0em; }
+nav a.compact.expanded:nth-child(2):not(.menu-bold) { top: 0em; }
+nav a.compact.expanded:nth-child(3):not(.menu-bold) { top: 0em; }
+nav a.compact.expanded:nth-child(4):not(.menu-bold) { top: 0em; }
+*/
 nav a.compact.expanded {
 	display: inherit;
 }
 nav a.compact.menu-bold {
 	display:inherit;
+	/*top:0;
+	z-index:2;*/
 }
 nav a.compact.menu-bold:after {
 	content: '▼';
