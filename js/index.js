@@ -40,7 +40,7 @@ function setLove() {
 
     window.setTimeout( function() {
 		next.style.opacity = 1;
-		next.style.bottom = ".25em";
+		next.style.bottom = "0em";
 	}, 100 );
 
     cur.classList.add('transition');
@@ -73,6 +73,63 @@ function sleep(millis, callback) {
 }
 
 
-window.onload = function () { 
+window.onload = function () {
+	if(window.innerWidth < 700) {
+		compactMenu();
+	}
+
     setInterval(setLove,3000);
 };
+
+window.onresize = function(event) {
+    if(window.innerWidth < 700) {
+    	compactMenu();
+	} else {
+		uncompactMenu();
+	}
+};
+
+function compactMenu(e) {
+	if(document.querySelectorAll('.compact').length > 0) return; // already compact
+
+	var menuItems = document.querySelectorAll('nav a');
+	for(var i=0;i<menuItems.length;i++) {
+		menuItems[i].className = menuItems[i].className + " compact";
+	}
+
+	var mainItem = document.querySelector('nav a.menu-bold');
+	mainItem.addEventListener('click',expandCompactedMenu);
+}
+function uncompactMenu(e) {
+	var menuItems = document.querySelectorAll('nav a');
+	for(var i=0;i<menuItems.length;i++) {
+		menuItems[i].className = menuItems[i].className.replace(' compact','');
+	}
+
+	var mainItem = document.querySelector('nav a.menu-bold');
+	mainItem.removeEventListener('click',expandCompactedMenu);
+}
+
+function expandCompactedMenu(e) {
+	e.preventDefault();
+	var menuItems = document.querySelectorAll('nav a');
+	for(var i=0;i<menuItems.length;i++) {
+		menuItems[i].className = menuItems[i].className + " expanded";
+	}
+
+	var mainItem = document.querySelector('nav a.menu-bold');
+	mainItem.removeEventListener('click',  expandCompactedMenu);
+	mainItem.addEventListener   ('click',unexpandCompactedMenu);
+}
+
+function unexpandCompactedMenu(e) {
+	e.preventDefault();
+	var menuItems = document.querySelectorAll('nav a');
+	for(var i=0;i<menuItems.length;i++) {
+		menuItems[i].className = menuItems[i].className.replace(' expanded','');
+	}
+
+	var mainItem = document.querySelector('nav a.menu-bold');
+	mainItem.removeEventListener('click',unexpandCompactedMenu);
+	mainItem.addEventListener   ('click',  expandCompactedMenu);
+}

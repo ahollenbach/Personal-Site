@@ -17,6 +17,7 @@ html {
 body {
 	margin: 0px;
 	width: 100%;
+	min-width: 405px;
 	min-height: 100%;
 	font-family: 'Quicksand', sans-serif;
 	color:#FFF;
@@ -58,8 +59,6 @@ a:active {
 }
 nav {
 	margin: auto;
-
-	height:3em;
 	line-height: 3em;
 }
 a {
@@ -70,7 +69,28 @@ nav a {
 	padding: 1em;
 	text-decoration:none;
 	background-color: rgba(0,0,0,.7);
-	transition: background-color 0.5s ease, border 0.5s ease;
+
+	-webkit-transition: background-color .4s ease, border .5s ease;
+	-moz-transition:    background-color .4s ease, border .5s ease;
+	-o-transition:      background-color .4s ease, border .5s ease;
+	transition: 		background-color .4s ease, border .5s ease;
+}
+nav a.compact {
+	display:none;
+}
+nav a.compact.expanded {
+	display: inherit;
+}
+nav a.compact.menu-bold {
+	display:inherit;
+}
+nav a.compact.menu-bold:after {
+	content: '▼';
+	float:right;
+}
+nav a.compact.menu-bold.expanded:after {
+	content: '▲';
+	float:right;
 }
 nav a:hover {
 	background-color: rgba(0,0,0,.95);
@@ -126,7 +146,7 @@ h3 {
 /******************** Love Slider ********************/
 #meet-andrew {
 	text-align: left;
-	margin: 1em auto 0 auto;
+	margin: 0 auto;
 	min-width:300px;
 	max-width: 800px;
 	color:#EDEDED;
@@ -138,14 +158,24 @@ h3 {
 #love-container {
 	position:relative;
 	min-width:300px;
+	line-height:1em;
 	border-bottom: 1px solid white;
 	color: rgba(40,40,100,0);
+	display:inline-block;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 .love-elem {
 	position:absolute;
 	width:300px;
 	height:1em;
 	color:#FFF;
+
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
 }
 #new-love {
 	-webkit-transition: opacity .4s ease-in-out, bottom .5s ease-in-out;
@@ -156,7 +186,7 @@ h3 {
 	bottom:1em;
 }
 #cur-love {
-	bottom: .25em;
+	bottom: 0em;
 }
 #cur-love.transition {
 	-webkit-transition: opacity .4s ease-in-out, bottom .5s ease-in-out;
