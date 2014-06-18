@@ -24,7 +24,9 @@ var loves = [
 	"Kickstarter",
 	"algorithms",
 	"nerdy jokes",
-	"quadrotors"
+	"quadrotors",
+	"traveling",
+	"Germany"
 ];
 var selectedIndex;
 

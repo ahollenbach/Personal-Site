@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="primary" class="row-fluid">
+<div id="primary">
 	<div id="content" role="main" class="span8 offset2">
 
 		<?php if ( have_posts() ) : ?>
