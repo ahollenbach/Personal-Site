@@ -68,7 +68,7 @@ a {
 nav a {
 	padding: 1em;
 	text-decoration:none;
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0,0,0,.8);
 
 	-webkit-transition: background-color .4s ease, border .5s ease, top .5s ease;
 	-moz-transition:    background-color .4s ease, border .5s ease, top .5s ease;
@@ -115,15 +115,15 @@ nav a:hover {
 .menu-bold {
 	background-color: rgba(0,0,0,.95);
 }
-nav a.home     { border-bottom-color: #4D3E98; }
-nav a.about    { border-bottom-color: #7489FF; }
-nav a.thoughts { border-bottom-color: #5E97E8; }
-nav a.projects { border-bottom-color: #67CEFF; }
+nav a#menu-home     { border-bottom-color: #4D3E98; }
+nav a#menu-about    { border-bottom-color: #7489FF; }
+nav a#menu-thoughts { border-bottom-color: #5E97E8; }
+nav a#menu-projects { border-bottom-color: #67CEFF; }
 
-nav a.home    :hover { border-bottom-color: #282864; }
-nav a.about   :hover { border-bottom-color: #3B4EFF; }
-nav a.thoughts:hover { border-bottom-color: #2A6FE8; }
-nav a.projects:hover { border-bottom-color: #2EB1FF; }
+nav a#menu-home    :hover { border-bottom-color: #282864; }
+nav a#menu-about   :hover { border-bottom-color: #3B4EFF; }
+nav a#menu-thoughts:hover { border-bottom-color: #2A6FE8; }
+nav a#menu-projects:hover { border-bottom-color: #2EB1FF; }
 
 
 /******************** Content ********************/
