@@ -11,6 +11,14 @@
 
 	<link href="css/global.css" rel="stylesheet" type="text/css" />
 	<script src="js/menu.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="js/libs/jquery-2.1.1.min.js"><\/script>');
+	}
+	</script>
+
 </head>
 <body>
 	<div class="dot-overlay"></div>

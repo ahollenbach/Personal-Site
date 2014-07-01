@@ -4,7 +4,7 @@
 ?>
 
 <div id="wrapper">
-	<h3><span class="highlight">About</span> Andrew Hollenbach</h3>
+	<h1><span class="highlight">About</span> Andrew Hollenbach</h1>
 
 	<p>
 		I have many passions: data mining, computer vision, web development, space, science, music, photography, film, quidditch, games, sports...and the list goes on. Check me out on the web:

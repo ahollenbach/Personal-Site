@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Quicksand:400);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Quicksand:400|Lato:300,400,700,400italic);
 
 * {
   -webkit-box-sizing: border-box;
@@ -11,11 +11,11 @@ html {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	backround-size: cover;
+	background-size: cover;
 	height: 100%;
 }
 body {
-	margin: 0px;
+	margin: 0;
 	width: 100%;
 	min-width: 405px;
 	min-height: 100%;
@@ -28,11 +28,11 @@ body {
 	background: transparent url('../img/overlay.png'); 
 	opacity: 0.5; 
 	z-index: -1; 
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0; 
+	padding: 0; 
 	position: fixed; 
-	left: 0px; 
-	top: 0px; 
+	left: 0; 
+	top: 0; 
 	width: 100%; 
 	height: 100%;
 }
@@ -115,15 +115,15 @@ nav a:hover {
 .menu-bold {
 	background-color: rgba(0,0,0,.95);
 }
-nav a#menu-home     { border-bottom-color: #4D3E98; }
-nav a#menu-about    { border-bottom-color: #7489FF; }
-nav a#menu-thoughts { border-bottom-color: #5E97E8; }
-nav a#menu-projects { border-bottom-color: #67CEFF; }
+nav #menu-home     { border-bottom-color: #4D3E98; }
+nav #menu-about    { border-bottom-color: #7489FF; }
+nav #menu-thoughts { border-bottom-color: #5E97E8; }
+nav #menu-projects { border-bottom-color: #67CEFF; }
 
-nav a#menu-home    :hover { border-bottom-color: #282864; }
-nav a#menu-about   :hover { border-bottom-color: #3B4EFF; }
-nav a#menu-thoughts:hover { border-bottom-color: #2A6FE8; }
-nav a#menu-projects:hover { border-bottom-color: #2EB1FF; }
+nav #menu-home    :hover { border-bottom-color: #282864; }
+nav #menu-about   :hover { border-bottom-color: #3B4EFF; }
+nav #menu-thoughts:hover { border-bottom-color: #2A6FE8; }
+nav #menu-projects:hover { border-bottom-color: #2EB1FF; }
 
 
 /******************** Content ********************/
@@ -137,12 +137,12 @@ nav a#menu-projects:hover { border-bottom-color: #2EB1FF; }
 #wrapper {
 	padding:2em;
 }
-h3 {
+h1 {
 	font-size:1.5em;
 	font-weight:normal;
 	padding-top: 10px;
 	padding-bottom:25px;
-	margin: 0px;
+	margin: 0;
 	width:100%;
 }
 .highlight {
@@ -193,6 +193,7 @@ h3 {
 	-moz-user-select: text;
 	-webkit-user-select: text;
 	-ms-user-select: text;
+	user-select: text;
 }
 #new-love {
 	-webkit-transition: opacity .4s ease-in-out, bottom .5s ease-in-out;
@@ -237,4 +238,72 @@ h3 {
 }
 #social-icons img:hover {
 	opacity:1;
+}
+
+
+/************* Projects View ***************/
+.project {
+	text-align: left;
+    font-family: "Lato", Helvetica, sans-serif;
+	position: relative;
+	
+	padding: 1em;
+	background-color: rgba(40,40,90,.98);
+	
+	-webkit-transition: background-color .5s ease-in-out;
+	-moz-transition:    background-color .5s ease-in-out;
+	-o-transition:      background-color .5s ease-in-out;
+	transition:         background-color .5s ease-in-out;
+}
+.short-descr {
+	font-weight: 300;
+}
+.description {
+	display: none;
+}
+
+.project-info div {
+	display:inline-block;
+	text-align: center;
+	width:25%;
+}
+.project-info a {
+	text-decoration: none;
+    border: 0 none transparent;
+}
+.project-info a img {
+	text-decoration: none;
+    border: 0 none transparent;
+	width: 32px;
+}
+
+.project-info img {
+	opacity: .9;
+	/*
+	-webkit-transition: opacity .4s ease-in-out;
+	-moz-transition:    opacity .4s ease-in-out;
+	-o-transition:      opacity .4s ease-in-out;
+	transition:         opacity .4s ease-in-out;*/
+}
+
+.project-info.minimized {
+	position:absolute;
+	right:0;
+	top:0;
+	padding: 1em 1em;
+}
+
+.project-info.minimized div {
+	padding:0 .5em;
+}
+
+.project-info.minimized img {
+	width: 32px;
+}
+.project-info.minimized img:hover {
+	opacity: 1;
+}
+
+.project:hover {
+	background-color: rgba(50,50,100,.98) !important;
 }

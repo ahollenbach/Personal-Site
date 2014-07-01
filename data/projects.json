@@ -1,0 +1,38 @@
+{
+	"projects": [
+		{
+			"name": "Personal Website",
+			"shortDescription" : "My personal website, www.andrewhollenbach.com.",
+			"description": "I design and implement my own personal site, located at andrewhollenbach.com. Through this site, I aim to give visitors an idea of who I am, what I'm into, what I'm working on, and how to find me on the web. It's not super flashy, but it gets the job done and has given me a lot of practice with my web development skills, and through the years, I've had the opportunity to experiment with many different technologies.",
+			"linkToCode" : "https://github.com/ahollenbach/Personal-Site",
+			"linkToLive" : "http://www.andrewhollenbach.com",
+			"progress": 4,
+			"status": 1,
+			"openSource" : 1,
+			"activity" : []
+		},
+		{
+			"name": "Lohhausen 2.0",
+			"shortDescription" : "A project with the Cognitive Science department at the Universität Osnabrück.",
+			"description": "I am working with a group of cognitive science students at the University of Osnabrück under the lead of Frank Jäkel and Helmar Gust to develop a modern version of the original Lohhausen experiment, run in the 70s and . More information on the original can be found here: http://f20.blog.uni-heidelberg.de/2011/04/24/lohhausen-der-klassiker-unter-den-komplexen-problemen/.",
+			"progress": 3,
+			"status": 2,
+			"openSource" : 0,
+			"activity" : []
+		},
+		{
+			"name": "RIT Next Bus",
+			"shortDescription": "RIT Next Bus is an Android app that tells you when your next bus comes.",
+			"description": "RIT Next Bus is a simple bus app for the RIT community! Find out when the next bus is coming to your home location (currently supports The Province, Colony Manor, Perkins Green, and Park Point), or when it arrives at Gleason Circle.",
+			"linkToLive" : "https://play.google.com/store/apps/details?id=com.andrewhollenbach.RITNextBus",
+			"progress": 4,
+			"status": 1,
+			"openSource": 0
+		}
+	],
+	"status" : {
+		"0" : "Inactive",
+		"1" : "Occasional activity",
+		"2" : "Active development"
+	}
+}
