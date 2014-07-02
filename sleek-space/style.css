@@ -68,7 +68,7 @@ article .the-content a {
   font-weight: 900;
   text-decoration: none;
 }
-article .the-content p {
+article .the-content p, article ul {
   color: #191919;
   text-align: justify;
 }
@@ -94,9 +94,12 @@ article .meta .post-categories li {
   display: inline-block;
   margin-right: 10px;
 }
-article p, .meta a {
+article p, .meta a, article ul {
   font-family: Lato, Helvetica, sans-serif;
   font-weight: 300;
+}
+article ul {
+  font-size: .9em;
 }
 
 .meta a {
