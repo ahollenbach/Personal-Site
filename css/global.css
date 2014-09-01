@@ -250,10 +250,10 @@ h1 {
 	padding: 1em;
 	background-color: rgba(40,40,90,.98);
 	
-	-webkit-transition: background-color .5s ease-in-out;
-	-moz-transition:    background-color .5s ease-in-out;
-	-o-transition:      background-color .5s ease-in-out;
-	transition:         background-color .5s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+	-moz-transition:    background-color .3s ease-in-out;
+	-o-transition:      background-color .3s ease-in-out;
+	transition:         background-color .3s ease-in-out;
 }
 .short-descr {
 	font-weight: 300;
@@ -305,5 +305,5 @@ h1 {
 }
 
 .project:hover {
-	background-color: rgba(50,50,100,.98) !important;
+	background-color: rgba(60,60,160,.98) !important;
 }
