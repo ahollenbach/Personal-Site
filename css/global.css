@@ -7,7 +7,7 @@
 }
 
 html {
-	background: url(../img/pi.jpg) no-repeat center center fixed; 
+	background: url(../img/mountains.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -51,7 +51,7 @@ a:active {
 
 /******************** Navigation ********************/
 #navbar  {
-	font-family: "Quicksand", Verdana, Tahoma;
+	font-family: 'Josefin Slab', serif;
 	color:#DDD;
 	font-size:1.1em;
 	/*background-color: rgba(10, 10, 10, 0.6);*/
@@ -63,7 +63,6 @@ nav {
 }
 a {
 	text-decoration: none;
-    border-bottom: 3px solid white;
 }
 nav a {
 	padding: 1em;
@@ -132,7 +131,7 @@ nav #menu-projects:hover { border-bottom-color: #2EB1FF; }
 	margin: 1em auto 0 auto;
 	min-width:300px;
 	max-width: 800px;
-	background-color: rgba(40,40,100,.98);
+	background-color: rgba(40,40,40,.45);
 }
 #wrapper {
 	padding:2em;
@@ -155,7 +154,6 @@ h1 {
 	-moz-border-radius: 150px;
 	-o-border-radius: 150px;
 	border-radius: 150px;
-	border: 9px solid #EFEFEF;
 	margin:1em auto;
 }
 
@@ -167,7 +165,6 @@ h1 {
 	min-width:300px;
 	max-width: 800px;
 	color:#EDEDED;
-	background-color: rgba(40,40,100,.98);
 	padding:2em;
 	line-height: 2.1em;
 	font-family: 'Josefin Slab', serif;
