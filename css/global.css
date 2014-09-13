@@ -54,7 +54,6 @@ a:active {
 	font-family: 'Josefin Slab', serif;
 	color:#DDD;
 	font-size:1.1em;
-	/*background-color: rgba(10, 10, 10, 0.6);*/
 	text-align: center;
 }
 nav {
@@ -67,7 +66,7 @@ a {
 nav a {
 	padding: 1em;
 	text-decoration:none;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(40,40,40,.3);
 
 	-webkit-transition: background-color .4s ease, border .5s ease, top .5s ease;
 	-moz-transition:    background-color .4s ease, border .5s ease, top .5s ease;
@@ -109,10 +108,10 @@ nav a.compact.menu-bold.expanded:after {
 	float:right;
 }
 nav a:hover {
-	background-color: rgba(0,0,0,.95);
+	background-color: rgba(40,40,40,.5)
 }
 .menu-bold {
-	background-color: rgba(0,0,0,.95);
+	background-color: rgba(0,0,0,.75);
 }
 nav #menu-home     { border-bottom-color: #4D3E98; }
 nav #menu-about    { border-bottom-color: #7489FF; }
@@ -303,4 +302,8 @@ h1 {
 
 .project:hover {
 	background-color: rgba(60,60,160,.98) !important;
+}
+
+h3 {
+	font-size:1.5em;
 }
