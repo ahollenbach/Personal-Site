@@ -21,7 +21,6 @@
 
 </head>
 <body>
-	<div class="dot-overlay"></div>
 	<div id="navbar">
 		<nav id="menu">
 			<a href="index.php"    id="menu-home"     <?php if(!isset($title)) { echo "class='menu-bold'"; } ?>                                    >Andrew Hollenbach</a>

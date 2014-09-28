@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Quicksand:400|Lato:300,400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Lato:300,400,700,400italic);
 
 * {
   -webkit-box-sizing: border-box;
@@ -19,7 +19,7 @@ body {
 	width: 100%;
 	min-width: 405px;
 	min-height: 100%;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Lato', sans-serif;
 	color:#FFF;
 	font-size:1.3em;
 }
@@ -108,7 +108,7 @@ nav a.compact.menu-bold.expanded:after {
 	float:right;
 }
 nav a:hover {
-	background-color: rgba(40,40,40,.5)
+	background-color: rgba(40,40,40,.7)
 }
 .menu-bold {
 	background-color: rgba(0,0,0,.75);
@@ -142,6 +142,7 @@ h1 {
 	padding-bottom:25px;
 	margin: 0;
 	width:100%;
+	font-family: 'Josefin Slab', serif;
 }
 .highlight {
 	font-weight: bold;
@@ -290,7 +291,8 @@ h1 {
 }
 
 .project-info.minimized div {
-	padding:0 .5em;
+	margin:0 .25em;
+	width: 32px;
 }
 
 .project-info.minimized img {
@@ -306,4 +308,13 @@ h1 {
 
 h3 {
 	font-size:1.5em;
+}
+
+.sidenote {
+	font-size: 150%;
+	padding: 1em;
+	font-family: 'Josefin Slab', serif;
+}
+.sidenote a {
+	text-decoration: underline;
 }
