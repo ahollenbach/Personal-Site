@@ -1,3 +1,5 @@
+(function () {
+
 var loves = [
 	"data mining",
 	"problem solving",
@@ -26,8 +28,13 @@ var loves = [
 	"nerdy jokes",
 	"quadrotors",
 	"traveling",
-	"Germany"
+	"Germany",
+	"languages",
+	"cooking",
+	"food"
 ];
+// track 7 latest. First elem showing is loves[0], so we fill with that
+var loveHistory = [0,0,0,0,0,0,0,0];
 var selectedIndex;
 
 function setLove() {
@@ -38,7 +45,7 @@ function setLove() {
 	next.setAttribute('class','love-elem');
 	container.insertBefore(next,cur);
 
-    var nextText = getRandomLove(cur.innerHTML);
+    var nextText = getRandomLove();
     next.innerHTML = nextText;
 
     window.setTimeout( function() {
@@ -61,12 +68,16 @@ function removeTransition() {
 	next.parentNode.removeChild(next);
 }
 
-function getRandomLove(oldText) {
-	var newText = oldText;
-	while(newText == oldText) {
-		newText = loves[Math.floor(Math.random()*loves.length)];
+// gets a random love, making sure the same doesn't show up if it has recently
+function getRandomLove() {
+	var i = Math.floor(Math.random()*loves.length);
+
+	while($.inArray(i,loveHistory) >= 0) {
+		i = Math.floor(Math.random()*loves.length);
 	}
-	return newText;
+	loveHistory.shift();
+	loveHistory.push(i);
+	return loves[i];
 }
 
 function sleep(millis, callback) {
@@ -85,3 +96,5 @@ window.onload = function () {
     	setInterval(setLove,3000);
     }
 };
+
+}());
