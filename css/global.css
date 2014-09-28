@@ -23,18 +23,8 @@ body {
 	color:#FFF;
 	font-size:1.3em;
 }
-/* dot overlay inspired by Jon Phillips (http://jonphillips.ca/) */
-.dot-overlay { 
-	background: transparent url('../img/overlay.png'); 
-	opacity: 0.5; 
-	z-index: -1; 
-	margin: 0; 
-	padding: 0; 
-	position: fixed; 
-	left: 0; 
-	top: 0; 
-	width: 100%; 
-	height: 100%;
+p {
+	font-weight: 300;
 }
 a:link {
 	color:#DDD;
