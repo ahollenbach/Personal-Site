@@ -1,8 +1,22 @@
 window.onload = function () {
-	$(".project:odd").css("background-color","rgba(35,35,90,.98)");
+	//$(".project:odd").css("background-color","rgba(35,35,90,.98)");
 	collapseAll();
-	$(".project").click(function(e) {
+	$(".more").click(function(e) {
+		//$(this).parent().toggleClass("minimized");
+		var parent = $(this).parent();
+		parent.toggleClass("expanded");
 		
+		if(parent.children(".project-descr").is(":visible")) {
+			parent.children(".project-descr").slideUp('slow');
+		} else {
+			parent.children(".project-descr").slideDown('slow');
+		}
+
+		if($(this).html() == "more...") {
+			$(this).html("less");
+		} else {
+			$(this).html("more...");
+		}
 	});
 };
 

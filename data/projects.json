@@ -14,7 +14,8 @@
 			"id": "lohhausen",
 			"name": "Lohhausen 2.0",
 			"shortDescription" : "A project with the Cognitive Science department at the Universität Osnabrück.",
-			"description": "I am working with a team of cognitive science students at the University of Osnabrück under the lead of Frank Jäkel and Helmar Gust to develop a modern version of the original Lohhausen experiment, run in the 70s and . More information on the original can be found here: http://f20.blog.uni-heidelberg.de/2011/04/24/lohhausen-der-klassiker-unter-den-komplexen-problemen/.",
+			"description": "I am working with a team of cognitive science students at the University of Osnabrück under the lead of Frank Jäkel and Helmar Gust to develop a modern version of the original Lohhausen experiment run in the 1970s. More information on the original can be found here: http://f20.blog.uni-heidelberg.de/2011/04/24/lohhausen-der-klassiker-unter-den-komplexen-problemen/.",
+			"linkToLive" : "http://mvc.ikw.uni-osnabrueck.de/lohhausen/",
 			"status": 2,
 			"activity" : []
 		},

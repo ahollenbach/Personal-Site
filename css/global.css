@@ -245,18 +245,42 @@ h1 {
 	position: relative;
 	
 	padding: 1em;
-	background-color: rgba(40,40,90,.98);
+	background-color: rgba(50,50,50,.48);
 	
-	-webkit-transition: background-color .3s ease-in-out;
-	-moz-transition:    background-color .3s ease-in-out;
-	-o-transition:      background-color .3s ease-in-out;
-	transition:         background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-moz-transition:    background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition:      background-color .3s ease-in-out, color .3s ease-in-out;
+	transition:         background-color .3s ease-in-out, color .3s ease-in-out;
 }
-.short-descr {
+.project:nth-child(odd) {
+	/*background-color: rgba(50,50,50,.68);*/
+}
+.project:hover {
+	background-color: rgba(240,240,240,.78) !important;
+	color: #333 !important;
+}
+.project a {
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-moz-transition:    background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition:      background-color .3s ease-in-out, color .3s ease-in-out;
+	transition:         background-color .3s ease-in-out, color .3s ease-in-out;
+}
+.project:hover a {
+	color: #222;
+}
+
+.short-descr, .project-descr {
 	font-weight: 300;
 }
-.description {
-	display: none;
+.project-descr {
+	font-size: 0.83em;
+}
+.project-descr h4 {
+	/* prevents jumpy transition */
+	margin-top: 0;
+}
+.project.expanded {
+	background-color: rgba(30,30,30,.88);
 }
 
 .project-info div {
@@ -302,12 +326,16 @@ h1 {
 	opacity: 1;
 }
 
-.project:hover {
-	background-color: rgba(60,60,160,.98) !important;
-}
-
 h3 {
 	font-size:1.5em;
+}
+.more {
+	font-weight: 300;
+	font-size: 70%;
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	cursor: pointer;
 }
 
 .sidenote {

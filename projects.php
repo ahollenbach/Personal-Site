@@ -4,8 +4,6 @@
 ?>
 <script src="js/projects.js"></script>
 
-<h1><span class="highlight">Projects</span></h1>
-
 <div id="projects-table">
 <?php
     $projects_info = json_decode(file_get_contents("data/projects.json"), true);
@@ -65,11 +63,13 @@
         }
 
         echo "</div>
+            <span class='more'>more...</span>
 	    </div>";
     }
 ?>
+        <div class="project">
+            <p class="sidenote">View more open source projects on <a href="http://www.github.com/ahollenbach" target='_blank'>GitHub</a>.</p>
+        </div>
 </div>
-
-<p class="sidenote">View more open source projects on <a href="http://www.github.com/ahollenbach" target='_blank'>GitHub</a>.</p>
 
 <?php include("footer.php"); ?>
