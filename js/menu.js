@@ -1,13 +1,30 @@
 /////////////////////////////////////////////////////////////////////
 // Responsive Menu
 /////////////////////////////////////////////////////////////////////
+window.onload = function () {
+  if(window.innerWidth < 705) {
+    compactMenu();
+  }
+  if(window.innerWidth < 1386) {
+    document.getElementById("wrapper").style.marginLeft = "1%";
+    document.getElementById("meet-andrew").style.marginLeft = "1%";
+  }
+};
 
 window.onresize = function(event) {
-    if(window.innerWidth < 705) {
-    	compactMenu();
+  if(window.innerWidth < 705) {
+    compactMenu();
 	} else {
 		uncompactMenu();
 	}
+
+  if(window.innerWidth < 1386) {
+    document.getElementById("wrapper").style.marginLeft = "1%";
+    document.getElementById("meet-andrew").style.marginLeft = "1%";
+  } else {
+    document.getElementById("wrapper").style.marginLeft = "10%";
+    document.getElementById("meet-andrew").style.marginLeft = "10%";
+  }
 };
 
 function compactMenu(e) {

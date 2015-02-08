@@ -88,13 +88,9 @@ function sleep(millis, callback) {
 
 
 window.onload = function () {
-	if(window.innerWidth < 705) {
-		compactMenu();
-	}
-
 	if(document.getElementById("love-container") !== null) {
     	setInterval(setLove,3000);
-    }
+  }
 };
 
 }());

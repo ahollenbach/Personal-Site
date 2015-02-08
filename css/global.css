@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Lato:300,400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Lato:300,400,700,400italic|Julius+Sans+One);
 
 * {
   -webkit-box-sizing: border-box;
@@ -7,7 +7,8 @@
 }
 
 html {
-	background: url(../img/mountains.jpg) no-repeat center center fixed; 
+  /* Photo Credit: Serena Planera */
+	background: url(../img/trieste.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -20,29 +21,29 @@ body {
 	min-width: 405px;
 	min-height: 100%;
 	font-family: 'Lato', sans-serif;
-	color:#FFF;
+	color:#000;
 	font-size:1.3em;
 }
 p {
 	font-weight: 300;
 }
 a:link {
-	color:#DDD;
+	color:#000;
 }
 a:visited {
-	color:#DDD;
+	color:#000;
 }
 a:hover {
-	color:#DDD;
+	color:#000;
 }
 a:active {
-	color:#DDD;
+	color:#000;
 }
 
 /******************** Navigation ********************/
 #navbar  {
 	font-family: 'Josefin Slab', serif;
-	color:#DDD;
+	color:#000;
 	font-size:1.1em;
 	text-align: center;
 }
@@ -56,7 +57,7 @@ a {
 nav a {
 	padding: 1em;
 	text-decoration:none;
-	background-color: rgba(40,40,40,.3);
+	background-color: rgba(40,40,40,0);
 
 	-webkit-transition: background-color .4s ease, border .5s ease, top .5s ease;
 	-moz-transition:    background-color .4s ease, border .5s ease, top .5s ease;
@@ -98,10 +99,10 @@ nav a.compact.menu-bold.expanded:after {
 	float:right;
 }
 nav a:hover {
-	background-color: rgba(40,40,40,.7)
+	background-color: rgba(240,240,240,.8)
 }
 .menu-bold {
-	background-color: rgba(0,0,0,.75);
+	background-color: rgba(240,240,240,.6);
 }
 nav #menu-home     { border-bottom-color: #4D3E98; }
 nav #menu-about    { border-bottom-color: #7489FF; }
@@ -116,14 +117,15 @@ nav #menu-projects:hover { border-bottom-color: #2EB1FF; }
 
 /******************** Content ********************/
 #content {
-	text-align: center;
 	margin: 1em auto 0 auto;
-	min-width:300px;
-	max-width: 800px;
-	background-color: rgba(40,40,40,.45);
+	min-width:400px;
+	/*background-color: rgba(40,40,40,.45);*/
 }
 #wrapper {
 	padding:2em;
+
+  max-width: 800px;
+  margin-left:10%;
 }
 h1 {
 	font-size:1.5em;
@@ -132,7 +134,7 @@ h1 {
 	padding-bottom:25px;
 	margin: 0;
 	width:100%;
-	font-family: 'Josefin Slab', serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 .highlight {
 	font-weight: bold;
@@ -151,20 +153,20 @@ h1 {
 /******************** Love Slider ********************/
 #meet-andrew {
 	text-align: left;
-	margin: 0 auto;
-	min-width:300px;
+	margin-left:10%;
+	min-width:400px;
 	max-width: 800px;
-	color:#EDEDED;
+	color:#000;
 	padding:2em;
 	line-height: 2.1em;
-	font-family: 'Josefin Slab', serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 #love-container {
 	position:relative;
-	min-width:300px;
+	min-width:400px;
 	line-height:1em;
-	border-bottom: 1px solid white;
-	color: rgba(40,40,100,0);
+	border-bottom: 1px solid black;
+	color: rgba(255,255,255,0);
 	display:inline-block;
 
 	-moz-user-select: none;
@@ -173,9 +175,9 @@ h1 {
 }
 .love-elem {
 	position:absolute;
-	width:300px;
+	min-width:400px;
 	height:1em;
-	color:#FFF;
+	color:#000;
 
 	-moz-user-select: text;
 	-webkit-user-select: text;
@@ -233,10 +235,11 @@ h1 {
 	text-align: left;
     font-family: "Lato", Helvetica, sans-serif;
 	position: relative;
-	
+
 	padding: 1em;
 	background-color: rgba(50,50,50,.48);
-	
+  color:#FFF;
+
 	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	-moz-transition:    background-color .3s ease-in-out, color .3s ease-in-out;
 	-o-transition:      background-color .3s ease-in-out, color .3s ease-in-out;
@@ -246,8 +249,7 @@ h1 {
 	/*background-color: rgba(50,50,50,.68);*/
 }
 .project:hover {
-	background-color: rgba(240,240,240,.78) !important;
-	color: #333 !important;
+	background-color: rgba(25,25,25,.92) !important;
 }
 .project a {
 	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
@@ -255,10 +257,6 @@ h1 {
 	-o-transition:      background-color .3s ease-in-out, color .3s ease-in-out;
 	transition:         background-color .3s ease-in-out, color .3s ease-in-out;
 }
-.project:hover a {
-	color: #222;
-}
-
 .short-descr, .project-descr {
 	font-weight: 300;
 }
@@ -335,4 +333,14 @@ h3 {
 }
 .sidenote a {
 	text-decoration: underline;
+}
+#projects-table {
+  max-width: 800px;
+
+  text-align: center;
+}
+
+.supersized {
+  font-size: 220%;
+  line-height:160%;
 }
