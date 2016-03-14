@@ -26,7 +26,7 @@
 			<a href="index.php"    id="menu-home"     <?php if(!isset($title)) { echo "class='menu-bold'"; } ?>                                    >Andrew Hollenbach</a>
 			<a href="about.php"    id="menu-about"    <?php if(isset($title) && strtolower($title) == "about")    { echo "class='menu-bold'"; } ?> >About</a>
 			<!--a href="thoughts/"    id="menu-thoughts" <?php if(isset($title) && strtolower($title) == "thoughts") { echo "class='menu-bold'"; } ?> >Thoughts</a-->
-			<a href="projects.php" id="menu-projects" <?php if(isset($title) && strtolower($title) == "projects") { echo "class='menu-bold'"; } ?> >Projects</a>
+			<a href="http://www.github.com/ahollenbach" target="_blank" id="menu-projects" <?php if(isset($title) && strtolower($title) == "projects") { echo "class='menu-bold'"; } ?> >Github</a>
 		</nav>
 	</div>
 	<div id="content">
