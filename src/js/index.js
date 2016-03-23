@@ -81,9 +81,9 @@ function getRandomLove() {
 }
 
 function sleep(millis, callback) {
-    setTimeout(function()
-            { callback(); }
-    , millis);
+    setTimeout(function() {
+      callback();
+    }, millis);
 }
 
 
