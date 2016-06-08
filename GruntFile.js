@@ -59,9 +59,19 @@ module.exports = function(grunt) {
         files: 'src/**/*.js',
         tasks: ['jshint', 'uglify']
       }
+    },
+
+    copy: {
+      main: {
+        expand: true,
+        cwd: "src/",
+        src: '*.html',
+        dest: 'dist/',
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -69,7 +79,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'less:prod', 'imagemin']);
-  grunt.registerTask('dev', ['jshint', 'uglify', 'less:dev', 'imagemin']);
-  grunt.registerTask('prod', ['jshint', 'uglify', 'less:prod', 'imagemin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'less:prod', 'imagemin', 'copy']);
+  grunt.registerTask('dev', ['jshint', 'uglify', 'less:dev', 'copy']);
+  grunt.registerTask('prod', ['jshint', 'uglify', 'less:prod', 'imagemin', 'copy']);
 };
