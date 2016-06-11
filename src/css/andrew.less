@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'LoveloBlack';
-  src: url('../res/fonts/LoveloBlack/LoveloBlack.eot?#iefix') format('embedded-opentype'),  url('../res/fonts/LoveloBlack/LoveloBlack.otf')  format('opentype'),
-	     url('../res/fonts/LoveloBlack/LoveloBlack.woff') format('woff'), url('../res/fonts/LoveloBlack/LoveloBlack.ttf')  format('truetype'), url('../res/fonts/LoveloBlack/LoveloBlack.svg#LoveloBlack') format('svg');
+  src: url('../res/fonts/LoveloBlack/lovelo_black-webfont.woff2') format('woff2'),
+       url('../res/fonts/LoveloBlack/lovelo_black-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,17 +22,18 @@
 
 html {
   background-color: @dark-green;
-  background: linear-gradient(0deg, @darker-green 0%, @dark-green 100%);
+  // background: linear-gradient(0deg, @darker-green 0%, @dark-green 100%);
+  height: 100%;
+  min-width: 415px;
 }
 
 body {
-	margin: 0;
-	width: 100%;
-	min-width: 405px;
-	min-height: 100%;
-	font-family: 'Lato', sans-serif;
-	color:#000;
-	font-size:1.3em;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+  color:#000;
+  font-size:1.3em;
   text-align: center;
   color: #FFF;
 }
@@ -50,22 +51,25 @@ p {
 	font-weight: 300;
   text-align: left;
 }
+.content p {
+  margin: 1em 1.5em;
+}
 
 a {
   font-weight: bold;
   text-decoration: none;
 }
 a:link {
-	color:#FFF;
+  color:#FFF;
 }
 a:visited {
-	color:#FFF;
+  color:#FFF;
 }
 a:hover {
-	color:#FFF;
+  color:#FFF;
 }
 a:active {
-	color:#FFF;
+  color:#FFF;
 }
 
 #header-img {
@@ -76,7 +80,11 @@ a:active {
 
 #wrapper {
   position: relative;
-  top: -6.5em;
+  top: -7em;
+}
+
+.subtitle {
+  margin-top: -2em;
 }
 
 h1.title {
@@ -86,7 +94,7 @@ h1.title {
 h2.emph {
   color: #e85b0c;
   font-size: 2em;
-  margin-top: -0.25em;
+  margin-top: -0.75em;
 
   background: linear-gradient(330deg, #e85b0c 0%, #E8A80C 100%);
   -webkit-text-fill-color: transparent;
@@ -96,26 +104,27 @@ h2.emph {
 
 /******************** Social Icons ********************/
 #social-icons {
-	margin: 2em 1em 1em 1em;
-	padding: 0;
+  margin: 2em 1em 1em 1em;
+  padding: 0;
 }
 #social-icons li {
-	display: inline;
-	text-decoration: none;
-	margin: 0 .25em;
+  display: inline;
+  text-decoration: none;
+  margin: 0 .25em;
 }
 #social-icons a {
-	border: none;
+  border: none;
 }
 #social-icons img {
-	-webkit-transition: opacity .2s ease-in-out;
-	-moz-transition:    opacity .2s ease-in-out;
-	-o-transition:      opacity .2s ease-in-out;
-	transition:         opacity .2s ease-in-out;
-	opacity:.8;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition:    opacity .2s ease-in-out;
+  -o-transition:      opacity .2s ease-in-out;
+  transition:         opacity .2s ease-in-out;
+  opacity:.9;
+  width: 1.5em;
 }
 #social-icons img:hover {
-	opacity:1;
+  opacity:1;
 }
 
 
@@ -136,6 +145,9 @@ h2.emph {
   #wrapper {
     top: -4em;
   }
+  .subtitle {
+    margin-top: -0.8em;
+  }
 }
 @media screen and (max-width: 500px) {
   h1.title {
@@ -152,6 +164,9 @@ h2.emph {
   }
   #wrapper {
     top: -3.4em;
+  }
+  .subtitle {
+    margin-top: -0.8em;
   }
 }
 
