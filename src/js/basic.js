@@ -40,10 +40,10 @@ function getRandomLove() {
 	return loves[i];
 }
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function(event) {
 	if(document.getElementById("love") !== null) {
   	setLove();
   }
-};
+});
 
 }());
