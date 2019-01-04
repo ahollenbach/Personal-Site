@@ -19,5 +19,8 @@
     "grunt-contrib-watch": "^1.0.0",
     "jquery": "^2.2.2",
     "jshint-stylish": "^2.1.0"
+  },
+  "scripts": {
+    "now-build": "grunt prod"
   }
 }
