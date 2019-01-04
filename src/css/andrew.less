@@ -39,42 +39,106 @@ body {
   color: #FFF;
 }
 
-.content {
-  max-width: 968px;
-  margin: 0 auto;
-}
-
-#header-img-wrapper {
-  background: @darker-green;
-  margin: 0;
-  padding: 0;
-  margin-top: -12%;
-  max-height: 85%;
-  overflow: hidden;
+.grid-wrapper {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 1em;
 }
 
 #header-img {
-  vertical-align:bottom;
-  opacity: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 1;
+  z-index: 10;
+  margin: 0;
+
+  overflow: hidden;
+  max-height: 70vmin;
+}
+
+#header-img img {
+  /* Photo Credit: Serena Planera */
+  max-width: 100%;
   min-width: 100%;
 
+  opacity: 1;
   -webkit-transition: opacity .3s;
   -moz-transition:    opacity .3s;
   -o-transition:      opacity .3s;
   transition:         opacity .3s;
 }
-#header-img[data-src] {
+
+#header-img img[data-src] {
   opacity: 0;
+}
+
+#header-title {
+  grid-column: 1/span 8;
+  grid-row: 1;
+  text-align: center;
+  z-index: 50;
+  color: rgba(255, 255, 255, 0.8);
+  // margin: auto;
+  align-self: end;
+}
+
+#header-title .title {
+  margin-bottom: 0;
+  font-size: 3.2em;
+}
+
+#header-subtitle {
+  grid-column: 1/span 8;
+  grid-row: 2;
+  text-align: center;
+  z-index: 50;
+  color: rgba(255, 255, 255, 0.8);
+  align-self: start;
+}
+
+#header-subtitle .tagline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#header-subtitle #love {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: #e85b0c;
+  font-size: 2em;
+  // margin-top: -0.75em;
+
+  background: linear-gradient(330deg, #e85b0c 0%, #E8A80C 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.content {
+  grid-column: 2 / span 6;
+  grid-row: 3;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 4;
+  background-color: @darker-green;
+  align-self: end;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'LoveloBlack', sans-serif;
   text-transform: uppercase;
 }
+
 p {
 	font-weight: 300;
   text-align: left;
 }
+
 .content p {
   margin: 1em 1.5em;
 }
@@ -96,39 +160,10 @@ a:active {
   color:#FFF;
 }
 
-#header-img {
-  /* Photo Credit: Serena Planera */
-  width: 100vw;
-  position: relative;
-}
-
-#wrapper {
-  position: relative;
-  top: -7em;
-}
-
-.subtitle {
-  margin-top: -2em;
-}
-
-h1.title {
-  font-size: 3.5em;
-}
-
-h2.emph {
-  color: #e85b0c;
-  font-size: 2em;
-  margin-top: -0.75em;
-
-  background: linear-gradient(330deg, #e85b0c 0%, #E8A80C 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
 
 /******************** Social Icons ********************/
 #social-icons {
-  margin: 2em 1em 1em 1em;
+  margin: 2em 1em 2em 1em;
   padding: 0;
 }
 #social-icons li {
@@ -153,48 +188,48 @@ h2.emph {
 
 
 /** responsive **/
-@media screen and (max-width: 800px) {
-  h1.title {
-    font-size: 2em;
-  }
-  h2.tagline {
-    font-size: 1em;
-  }
-  h2.emph {
-    font-size: 1.25em;
-  }
-  .content {
-    margin: 0 0.5em;
-  }
-  #wrapper {
-    top: -4em;
-  }
-  .subtitle {
-    margin-top: -0.8em;
-  }
-}
-@media screen and (max-width: 500px) {
-  h1.title {
-    font-size: 1.7em;
-  }
-  h2.tagline {
-    font-size: 0.9em;
-  }
-  h2.emph {
-    font-size: 1.1em;
-  }
-  .content {
-    margin: 0 0.5em;
-  }
-  #wrapper {
-    top: -3.4em;
-  }
-  .subtitle {
-    margin-top: -0.8em;
-  }
-}
-
-/* min-aspect-ratio: 1/1? */
-@media (orientation: landscape) {
-  /* scale header picture */
-}
+// @media screen and (max-width: 800px) {
+//   h1.title {
+//     font-size: 2em;
+//   }
+//   h2.tagline {
+//     font-size: 1em;
+//   }
+//   h2.emph {
+//     font-size: 1.25em;
+//   }
+//   .content {
+//     margin: 0 0.5em;
+//   }
+//   #wrapper {
+//     top: -4em;
+//   }
+//   .subtitle {
+//     margin-top: -0.8em;
+//   }
+// }
+// @media screen and (max-width: 500px) {
+//   h1.title {
+//     font-size: 1.7em;
+//   }
+//   h2.tagline {
+//     font-size: 0.9em;
+//   }
+//   h2.emph {
+//     font-size: 1.1em;
+//   }
+//   .content {
+//     margin: 0 0.5em;
+//   }
+//   #wrapper {
+//     top: -3.4em;
+//   }
+//   .subtitle {
+//     margin-top: -0.8em;
+//   }
+// }
+//
+// /* min-aspect-ratio: 1/1? */
+// @media (orientation: landscape) {
+//   /* scale header picture */
+// }
