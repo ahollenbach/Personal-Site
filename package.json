@@ -22,5 +22,8 @@
   },
   "scripts": {
     "now-build": "grunt prod"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.3.2"
   }
 }
